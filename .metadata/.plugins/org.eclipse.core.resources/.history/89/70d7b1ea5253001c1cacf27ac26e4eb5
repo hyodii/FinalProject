@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page37</title>
+</head>
+<body>
+
+<div>
+	<h1>동아리 내 게시판 > 공지사항 목록 페이지</h1>
+</div>
+
+<div>
+	<h3>카테고리 > 소분류</h3>
+	<h3>동아리 타이틀</h3>
+	<h3>개설일</h3>
+	<h3>인원수</h3>
+	<h3>지역</h3>
+</div>
+
+</body>
+</html>
