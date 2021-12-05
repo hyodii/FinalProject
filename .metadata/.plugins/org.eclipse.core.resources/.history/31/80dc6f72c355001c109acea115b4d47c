@@ -1,0 +1,220 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Article.jsp</title>
+<style type="text/css">
+#bbs 
+{
+	width:600px;
+	margin:30px auto;
+	text-align:left;
+}
+
+#bbs_title 
+{
+	width:574px;
+	padding-left:20px;
+	height:40px;
+	border:3px solid #D6D4A6;
+	text-align:left;
+	font-weight: bold;
+	line-height:40px;
+	font-size:10pt;
+	margin-bottom:30px;
+}
+
+#bbsArticle 
+{
+	width:600px;
+	overflow: visible;
+	border-top:3px solid #E6D4A6;
+	border-bottom:3px solid #E6D4A6;
+	text-align:left;
+}
+
+#bbsArticle_header 
+{
+	height:35px;
+	line-height:35px;
+	border-bottom:2px solid #DBDBDB;
+	text-align:center;
+}
+
+#bbsArticle dt 
+{
+	float:left;
+	height:35px;
+	width:60px;
+	line-height:35px;
+	text-align:center;
+	background-color:#EEEEEE;
+}
+
+#bbsArticle dd 
+{
+	float:left;
+	height:35px;
+	width:200px;
+	line-height:35px;
+	text-align:left;
+	padding-left:10px;
+}
+
+.bbsArticle_bottomLine 
+{
+	height:35px;
+	line-height:35px;
+	border-bottom:1px solid #DBDBDB;
+	clear:both;
+	text-align:left;
+}
+
+.bbsArticle_noLine 
+{
+	height:35px;
+	line-height:35px;
+	clear:both;
+	text-align:left;
+}
+
+#bbsArticle_content 
+{
+    overflow: visible;
+    border-bottom:1px solid #DBDBDB;
+    text-align:left;
+    min-height:250px;
+    padding: 20px 60px 20px 60px;
+    word-break:break-all;
+}
+
+#bbsArticle_footer 
+{
+	clear:both;
+	height:32px;
+	line-height:32px;
+	margin-bottom:20px;
+}
+
+#bbsArticle_footer #leftFooter
+{
+	float:left;
+	width:300px;
+	text-align:left;
+}
+
+#bbsArticle_footer #rightFooter
+{
+	float:right;
+	width:300px;
+	text-align:right;
+}
+</style>
+</head>
+<body>
+
+<div id="bbs">
+
+	<div id="bbs_title">
+		회의(메뉴) > 투표(소메뉴) (JDBC 연동 버전)
+	</div>
+	
+	<div class="bbsArticle_bottomLine">
+		목록
+		이전글
+		다음글
+		<%-- <%
+		if (beforeNum != -1)
+		{
+		%>
+		<!-- <a>이전 글 : (104) 취미분야 게시물</a> -->
+		<a href="<%=cp%>/Article.jsp?pageNum=<%=pageNum%>&num=<%=beforeNum%>">
+		이전 글 : (<%=beforeNum %>) <%=dtoBefore.getSubject() %></a>
+		<%
+		}
+		else
+		{
+		%>
+		이전 글 : 없음
+		<%
+		}
+		%> --%>
+	</div>
+	
+	<div id="bbsArticle">
+	
+		<div id="bbsArticle_header">
+			게시물의 제목입니다.
+			<%-- <%=dto.getSubject() %> --%>
+		</div>
+		
+		<div class="bbsArticle_bottomLine">
+			<di>
+				<dt>작성자</dt>
+				<dd>비클러</dd>
+				<%-- <dd><%=dto.getName() %></dd> --%>
+				
+				<dt>등록일</dt>
+				<dd>2021-12-05</dd>
+				<%-- <dd><%=lineSu %></dd> --%>
+			</di>
+		</div>
+		
+		<div class="bbsArticle_bottomLine">
+			<dl>
+				<dt>조회수</dt>
+				<dd>251</dd>
+				<%-- <dd><%=dto.getHitCount() %></dd> --%>
+			</dl>
+		</div>
+		
+		<div id="bbsArticle_content">
+			<table style="width: 600">
+				<tr>
+					<td style="padding: 10px 40px 10px 10px; vertical-align: top; height: 150">
+						어쩌구 저쩌구 이러쿵 저러쿵 내용입니다.
+						<%-- <%=dto.getContent() %> --%>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		
+	</div><!-- close #bbsArticle -->
+	
+	
+	<div class="bbsArticle_noLine" style="text-align: right;">
+		From : 211.238.142.150
+		<%-- From : <%=dto.getIpAddr() %> --%>
+	</div>
+	
+	<div id="bbsArticle_footer">
+		<div id="leftFooter">
+			<input type="button" value="수정" />
+			<input type="button" value="삭제" />
+			<%-- 
+			<input type="button" value="수정" class="btn2"
+			onclick="javasctipt:location.href='<%=cp%>/Updated.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>&status=1'"/>
+			<input type="button" value="삭제" class="btn2"
+			onclick="javascript:location.href='<%=cp%>/Updated.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>&status=2'"/>
+			--%>
+		</div>
+		
+		<div id="rightFooter">
+			<input type="button" value="리스트" />
+			<%-- <input type="button" value="리스트" class="btn2"
+			onclick="javascript:location.href='<%=cp%>/List.jsp?pageNum=<%=pageNum%>'"/> --%>
+			<!-- 리스트로 돌아오고 내가 읽었던 게시물 표시해주려면 pageNum 뿐만 아니라 num 도 받아와서 구분표시 처리 코드해주면됨! -->
+		</div>
+		
+	</div><!-- close #bbsArticle_footer -->
+	
+			
+</div><!-- close #bbs -->
+
+
+</body>
+</html>

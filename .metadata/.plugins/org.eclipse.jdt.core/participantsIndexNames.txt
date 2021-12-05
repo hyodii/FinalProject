@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
 C:\team1ViewPage\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\758086640.index
 \ViewPage\src
+C:\FinalProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\758086640.index
+\ViewPage\src
