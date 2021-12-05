@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>footer.jsp</title>
+<style type="text/css">
+.footer
+{
+  position: absolute;
+  bottom: 0px;
+  background: #f2f2f2;
+  width: 100%;
+}
+
+.first-line
+{
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+  font-size: 15px;
+  color: #70757a;
+}
+
+.second-line
+{
+  padding: 15px 30px;
+  font-size: 15px;
+  color: #70757a;
+}
+
+.second-line-second
+{
+  float: right;
+}
+
+.second-line a
+{
+  text-decoration: none;
+  color: #70757a;
+  padding-right: 15px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="footer">
+     <div class="first-line">
+       대한민국
+     </div>
+     
+     <div class="second-line">
+       <span>
+         <a href="#">Hyoogle정보</a>
+         <a href="#">Advertising</a>
+         <a href="#">Business</a>
+         <a href="#">How search works</a>
+       </span>
+
+       <span class="second-line-second">
+         <a href="#">Privacy</a>
+         <a href="#">Team</a>
+         <a href="#">Setting</a>
+       </span>
+
+</div>
+
+
+</body>
+</html>

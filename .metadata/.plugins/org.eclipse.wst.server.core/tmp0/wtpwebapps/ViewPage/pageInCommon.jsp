@@ -128,40 +128,21 @@
 		목록
 		이전글
 		다음글
-		<%-- <%
-		if (beforeNum != -1)
-		{
-		%>
-		<!-- <a>이전 글 : (104) 취미분야 게시물</a> -->
-		<a href="<%=cp%>/Article.jsp?pageNum=<%=pageNum%>&num=<%=beforeNum%>">
-		이전 글 : (<%=beforeNum %>) <%=dtoBefore.getSubject() %></a>
-		<%
-		}
-		else
-		{
-		%>
-		이전 글 : 없음
-		<%
-		}
-		%> --%>
 	</div>
 	
 	<div id="bbsArticle">
 	
 		<div id="bbsArticle_header">
 			게시물의 제목입니다.
-			<%-- <%=dto.getSubject() %> --%>
 		</div>
 		
 		<div class="bbsArticle_bottomLine">
 			<dl>
 				<dt>작성자</dt>
 				<dd>비클러</dd>
-				<%-- <dd><%=dto.getName() %></dd> --%>
 				
 				<dt>등록일</dt>
 				<dd>2021-12-05</dd>
-				<%-- <dd><%=lineSu %></dd> --%>
 			</dl>
 		</div>
 		
@@ -169,7 +150,6 @@
 			<dl>
 				<dt>조회수</dt>
 				<dd>251</dd>
-				<%-- <dd><%=dto.getHitCount() %></dd> --%>
 			</dl>
 		</div>
 		
@@ -178,8 +158,6 @@
 				<tr>
 					<td style="padding: 10px 40px 10px 10px; vertical-align: top; height: 150">
 						어쩌구 저쩌구 이러쿵 저러쿵 내용입니다.<br>
-						(JDBC 연동 버전 - webapp20 css 그대로 가져옴)
-						<%-- <%=dto.getContent() %> --%>
 					</td>
 				</tr>
 			</table>
