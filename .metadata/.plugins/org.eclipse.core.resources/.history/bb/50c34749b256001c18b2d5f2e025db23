@@ -1,0 +1,188 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>footer.jsp</title>
+<style type="text/css">
+/* footer
+{
+  position: absolute;
+  bottom: 0px;
+  background: #db9e36;
+  width: 100%;
+  height: 130px;
+} */
+
+
+
+footer 
+{
+	height: 100px;
+	color: white;
+	background-color: #db9e36;
+	position: 
+}
+
+.first-line
+{
+  padding: 15px 30px;
+  font-size: 15px;
+  color: white;
+}
+
+.first-line-second
+{
+	 float: right;
+}
+.second-line
+{
+  padding: 15px 30px;
+  font-size: 15px;
+  color: white;
+}
+
+.second-line-second
+{
+  float: right;
+}
+
+a
+{
+  text-decoration: none;
+  color: white;
+  padding-right: 15px;
+}
+
+.third-line
+{
+	padding: 15px 30px;
+	font-size: 15px;
+	color: white;	
+	width: 100px; 
+	margin: 0 auto;
+}
+
+</style>
+</head>
+<body>
+
+<div id="bbs">
+
+	<div id="bbs_title">
+		회의(메뉴) > 투표(소메뉴)
+	</div>
+	
+	<div class="bbsArticle_bottomLine">
+		목록
+		이전글
+		다음글
+	</div>
+	
+	<div id="bbsArticle">
+	
+		<div id="bbsArticle_header">
+			게시물의 제목입니다.
+		</div>
+		
+		<div class="bbsArticle_bottomLine">
+			<dl>
+				<dt>작성자</dt>
+				<dd>비클러</dd>
+				
+				<dt>등록일</dt>
+				<dd>2021-12-05</dd>
+			</dl>
+		</div>
+		
+		<div class="bbsArticle_bottomLine">
+			<dl>
+				<dt>조회수</dt>
+				<dd>251</dd>
+			</dl>
+		</div>
+		
+		<div id="bbsArticle_content">
+			<table style="width: 600">
+				<tr>
+					<td style="padding: 10px 40px 10px 10px; vertical-align: top; height: 150">
+						어쩌구 저쩌구 이러쿵 저러쿵 내용입니다.<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		
+	</div><!-- close #bbsArticle -->
+
+			
+</div><!-- close #bbs -->
+
+<!-- 
+<footer>
+     <div class="first-line">
+       <span class="first-line-second">
+         총 방문자수(다른거 넣거나빼도됨) : 1,500,200
+       </span>
+       
+     </div>
+
+       
+     <div class="second-line">
+       <span>
+         <a href="#">B:CLE 소개</a>
+         <a href="#">Policy</a>
+         <a href="#">GitHub</a>
+         <a href="#">뭐적지?</a>
+       </span>
+
+       <span class="second-line-second">
+         © Copyright 2021
+       </span>
+	</div>
+	
+	<div class="third-line">
+
+     		<a href="#">비클로고</a>
+
+	</div>
+</footer>
+
+-->
+
+<div class="wrapper">
+	
+</div>
+
+<footer>
+    <div class="container">
+        <div class="first-line pb-5 pt-5">
+            LOUIS VUITTON
+        </div>
+        <div class="row pb-5 pt-5 second-line ">
+            <div class="flag col">
+                <img src="https://us.louisvuitton.com/flags/us.svg" width=16 height=12 />
+                Unitied States
+            </div>
+            <div class="col"><a href="#" ">
+                Email Sign-Up</a></div>
+            <div class="col"> <a href="#">Contact Us</a></div>
+            <div class="col"> <a href="#">Apps</a></div>
+            <div class="col"> <a href="#">Follow Us</a></div>
+            <div class="col"> <a href="#">California Transparency</a></div>
+            <div class="col"><a href="#"> Legal Notice</a></div>
+            <div class="col"> <a href="#">Careers</a></div>
+            <div class="col"> <a href="#">Sitemap</a></div>     
+        </div>         
+        <div class=" mobile-footer">
+            Shipt to : <img src="https://us.louisvuitton.com/flags/us.svg"
+                width=16 height=12 class="flag-img" /> Unitied States
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

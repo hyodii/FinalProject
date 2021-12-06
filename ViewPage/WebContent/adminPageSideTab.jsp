@@ -71,7 +71,7 @@ ul.sidebar, ul.subSidebar
 
 <div class="sidebardiv">
 	<ul class="sidebar">
-		<li><h1>오늘도 달려요 관리자 페이지</h1></li>
+		<li><h1>관리자 페이지</h1></li>
 		
 		<li><a href="#">회원 관리</a>
 			<ul class="subSidebar">
@@ -134,29 +134,6 @@ ul.sidebar, ul.subSidebar
 </div>
 
 
-<div class="adminsearch">
-	<div>
-		<h1>게시판 제목</h1>
-	</div>
-	
-	
-	<div class="search">
-	         <form action ="" name="searchForm" method="post">
-	            <select name="searchKey" class="selectField">
-	               <option value="subject">여기</option>
-	               <option value="name">내용은</option>
-	               <option value="content">나중에 변경</option>
-	               
-	            </select>
-	            <input type="text" name="searchValue" class="textField" value="검색" placeholder="검색어를 입력해주세요.">
-	            <input type="button" value="검색" >
-	          </form>
-	      </div>
-	
-	
-	<div>
-		<p>글목록이 어쩌구 저쩌구</p>
-	</div>
-</div>
+
 </body>
 </html>
