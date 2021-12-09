@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+.lock
+{
+	background: gray;
+	margin: 0
+	
+}
+
+</style>
+</head>
+<body>
+<!-- 
+	scret.jsp
+	이 페이지를 보려면 동아리에 가입해주세요.
+-->
+<div class="lock">
+	<img src="images/lock.png" alt="" />
+	
+	이 페이지를 보려면 동아리에 가입해 주세요.
+</div>
+
+
+
+</body>
+</html>

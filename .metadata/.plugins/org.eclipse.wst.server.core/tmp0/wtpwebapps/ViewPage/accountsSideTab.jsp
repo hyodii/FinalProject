@@ -6,6 +6,23 @@
 <meta charset="UTF-8">
 <title>accountsSideTab.jsp</title>
 <style type="text/css">
+
+/*reset*/
+* {margin: 0;padding: 0;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; }
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i, ul {font-style: normal;}
+
+/*layout*/
+.mo {display: none;}
+.en {font-family: 'Exo 2', sans-serif;}
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
+.wrap {margin: 0 auto; }
 .sidebardiv 
 {
 	list-style-type: none;
@@ -76,15 +93,6 @@ ul.sidebar, ul.subSidebar
 	</ul>
 </div>
 
-
-
-<div class="cd1">
-	<h1>큰 제목</h1>
-	<h2>작은 제목</h2>
-	<p>여기에 나중에 목록 불러오면 됨</p>
-
-
-</div>
 
 </body>
 </html>

@@ -1,11 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+   request.setCharacterEncoding("UTF-8");
+   String cp = request.getContextPath();
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>pageInCommon.jsp</title>
 <style type="text/css">
+/*reset*/
+* {margin: 0;padding: 0;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; }
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i, ul {font-style: normal;}
+
+/*layout*/
+.mo {display: none;}
+.en {font-family: 'Exo 2', sans-serif;}
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
+.wrap {margin: 0 auto; }
+
 #bbs 
 {
 	width:600px;
@@ -118,6 +139,8 @@
 </head>
 <body>
 
+
+
 <div id="bbs">
 
 	<div id="bbs_title">
@@ -128,6 +151,11 @@
 		목록
 		이전글
 		다음글
+	</div>
+	
+	<div>
+		<input type="button" value="게시글 수정" />
+		<input type="button" value="게시글 삭제" />
 	</div>
 	
 	<div id="bbsArticle">
@@ -162,7 +190,6 @@
 				</tr>
 			</table>
 		</div>
-		
 		
 		
 	</div><!-- close #bbsArticle -->

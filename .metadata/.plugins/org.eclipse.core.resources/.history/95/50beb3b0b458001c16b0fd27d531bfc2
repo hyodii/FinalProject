@@ -1,0 +1,145 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>beefreeList.jsp</title>
+</head>
+<body>
+<!-- 
+	beefreeList.jsp
+	- 동아리내 자유글 게시판
+ -->
+<div id="wrap">
+   <div>
+      <!-- 메뉴 영역 -->
+      <c:import url="nav.jsp"></c:import>
+      
+      <!-- 사이드바 영역  -->
+      
+      <!-- 콘텐츠 영역 -->
+      <div id="content" style="margin-left: 30vh;">
+         <h1>자유글</h1>
+         <hr>
+
+         <div>
+            
+            <form action="">
+               <span class="right">
+                  <input type="text" value="검색어입력" class="search" />
+                  <input type="button" value="검색" />
+               </span>
+            </form>
+         </div>
+      
+         <table id="" class="table" >
+              <tr>
+                 <!-- 항목 8EA -->
+                 <th>순번</th>
+                 <th>글제목</th>
+                 <th>작성자</th>
+                 <th>작성일</th>
+                 <th>댓글수</th>
+                 <th>조회수</th>
+              </tr>
+              
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+              <tr>
+                 <td>999</td>
+                 <td>글제목이다.</td>
+                 <td>김기방</td>
+                 <td>2021-12-07</td>
+                 <td>0</td>
+                 <td>1</td>           
+              </tr>
+           
+              </table>
+        
+           
+        <div id="footer">
+         <p>1 Prev 21 22 23 24 25 26 27 28 29 30 Next 54</p>
+         <input type="button" value="글쓰기" />
+      	</div>   
+      	
+      </div>
+      
+    
+      
+      <!-- 푸터 영역 -->
+      <div>
+      	<c:import url="footer2.jsp"></c:import>	
+      </div>
+    
+
+
+   </div>
+
+</div>
+ 
+ 
+</body>
+</html>
