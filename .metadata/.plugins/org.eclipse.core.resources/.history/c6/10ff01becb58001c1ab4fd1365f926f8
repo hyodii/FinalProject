@@ -1,0 +1,67 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>
+	
+	<div>
+		<h3>자유글</h3>
+	</div>
+	
+	
+	<!-- 목록 / 이전글 / 다음글  -->
+	<div style="padding-left:10px; padding:10px;">
+	<a href="">목록</a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="">이전글</a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="">다음글</a>
+	&nbsp;&nbsp;&nbsp;
+	</div>
+	
+	<form action="">
+		<div style="text-align:right;width:600px;">
+		   <button>수정</button>
+		   <button>삭제</button>
+		   <a href="">🚨</a>
+		</div><br><br>
+		
+		<div></div>
+		<input type="text" style="width:600px; height:30px;" placeholder="제목">
+		<br><br>
+		<font size="2">닉네임</font>&nbsp;&nbsp;
+		<font size="2">조회10</font>&nbsp;&nbsp;
+		<font size="2">2021.11.20 22:02</font>&nbsp;&nbsp;
+		<font size="2">댓글 0</font>&nbsp;&nbsp;
+		<br><br>
+		
+		<div style="display: inline-block;">
+		   <input type="text" style="width:600px; height:200px;" placeholder="내용">         
+		</div><br><br>
+		
+		<font size="2">닉네임</font>&nbsp;&nbsp;
+		<font size="2">시간</font>&nbsp;&nbsp; <br>
+		<font size="2">내용</font>
+		<div style="text-align:right;width:600px;">
+		<font size="2">답글</font></div>
+		</div>
+		
+		<div style="display: inline-block;">
+		   <input type="text" style="width:600px; height:100px;" placeholder="댓글 내용을 입력하세요.">         
+		</div><br><br>
+		
+		<div style="width:600px; text-align:right;">
+		<button>댓글 작성</button>
+	
+	
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>
+	
+	<div>
+		<h3>자유글</h3>
+	</div>
+	
+	
+	<!-- 목록 / 이전글 / 다음글  -->
+	<div style="padding-left:10px; padding:10px;">
+	<a href="">목록</a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="">이전글</a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="">다음글</a>
+	&nbsp;&nbsp;&nbsp;
+	</div>
+	
+	<form action="">
+		<div style="text-align:right;width:600px;">
+		   <button>수정</button>
+		   <button>삭제</button>
+		   <a href="">🚨</a>
+		</div><br><br>
+	</form>
+	
+	
+</div>
+
+</body>
+</html>
