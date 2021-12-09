@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <title>beenoticeArticle.jsp</title>
 
-
+<!-- 모달을 위한 링크 -->
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <!-- Bootstrap CSS -->
 <link
@@ -288,7 +288,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 			
 </div><!-- close #bbs -->
 
-
+	<!-- 모달창 스크립트 -->
 	<script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
       integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"

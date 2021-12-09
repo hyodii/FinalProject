@@ -9,6 +9,16 @@
 <head>
 <meta charset="UTF-8">
 <title>beefreeArticle.jsp</title>
+
+<!-- 모달을 위한 링크 -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Bootstrap CSS -->
+<link
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+   rel="stylesheet"
+   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+   crossorigin="anonymous">
+
 <style type="text/css">
 /*reset*/
 * {margin: 0;padding: 0;}
@@ -27,6 +37,8 @@ address, em, i, ul {font-style: normal;}
 body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 .wrap {margin: 0 auto; }
 
+
+/* 여기서부터 아티클 css */
 #bbs 
 {
 	width:600px;
@@ -141,6 +153,40 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 	text-align: right;
 }
 
+/* 모달 css */
+@import
+   url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR&display=swap')
+   ;
+
+.row p {
+   font-size: 10px;
+   margin-left: 3vh;
+}
+
+.row {
+   margin-left: 10%;
+   margin-top: 10%;
+}
+
+.modal-footer {
+   display: flex;
+   flex-wrap: wrap;
+   flex-shrink: 0;
+   align-items: center;
+   justify-content: center;
+   padding: .75rem;
+   border-top: 0px solid #dee2e6;
+   border-bottom-right-radius: calc(.3rem - 1px);
+   border-bottom-left-radius: calc(.3rem - 1px);
+   padding: .75rem;
+}
+
+.btn-secondary {
+   color: #fff;
+   background-color: #6c757d;
+   border-color: #6c757d;
+   margin-right: 7vh;
+}
 
 </style>
 </head>
@@ -148,7 +194,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 
 <!-- 
 	beefreeArticle.jsp
-	동아리 내 게시판 > 자유글 > 글 목록 클릭 시
+	동아리 내 게시판 > 자유글 > 글 목록 클릭 시 아티클
 -->
 
 <div id="bbs">
@@ -163,17 +209,39 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 		다음글
 	</div>
 	
+	<!-- 동아리원일 때 아닐때 나눠서 버튼 작동하게 해야함!! -->
+	<!-- modal button -->
 	<div class="btnimg">
-		<input type="button" value="게시글 수정" />
-		<input type="button" value="게시글 삭제" />
+	      <a href="#" id="modal1" class="btn btn-success btn-sm"
+	         data-bs-toggle="modal" data-bs-target="#employee_details1">수정하기</a>
+	   
+	      <a href="#" id="modal1" class="btn btn-success btn-sm"
+	         data-bs-toggle="modal" data-bs-target="#employee_details1">삭제하기</a>
 		<img src="" alt="신고이미지"  />
 	</div>
+	
+	
+   <!-- Modal -->
+   <!-- 권한 창 -->
+   <div class="modal fade" id="employee_details1" tabindex="-1"
+      aria-labelledby="employee_details1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">권한이 없습니다.</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="닫기"></button>
+            </div>
+         </div>
+      </div>
+   </div><!-- close Modal  -->
+
 	
 	<form>
 		<div id="bbsArticle">
 			
 			<div id="bbsArticle_header">
-				게시물의 제목입니다.
+				겨울에 제일 먹고싶은 간식은?
 			</div>
 			
 			<div class="bbsArticle_bottomLine">
@@ -226,7 +294,35 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 			
 </div><!-- close #bbs -->
 
+	<!-- 모달창 스크립트 -->
+	<script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+      crossorigin="anonymous"></script>
+   <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+      integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+      crossorigin="anonymous"></script>
+   <script>
+      $(document).ready(function()
+      {
 
+         $('#employee_details2').on('beforeShow', function()
+         {
+            console.log('Submodal beforeShow event');
+         }).on('show', function()
+         {
+            console.log('Submodal show event');
+         }).on('beforeHide', function()
+         {
+            console.log('Submodal beforeHide event');
+         }).on('hide', function()
+         {
+            console.log('Submodal hide event');
+         });
+
+      });
+   </script>
 
 
 

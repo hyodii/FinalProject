@@ -22,7 +22,7 @@
 <body>
 <!-- 
 	beefreeList.jsp
-	- 동아리내 게시판 > 자유글 리스트
+	- 동아리내 게시판 > 자유글 리스트 목록
  -->
 <div id="wrap">
    <div>
