@@ -176,7 +176,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
       
     
       
-      f.action = "<%=cp%>/beenoticeCreate_ok.jsp";
+      f.action = "<%=cp%>/beenoticeCreated_ok.jsp";
       f.submit();
       
       

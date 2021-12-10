@@ -204,9 +204,9 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 	</div>
 	
 	<div class="bbsArticle_bottomLine">
-		목록
-		이전글
-		다음글
+		<a href="">목록</a>
+		<a href="">이전글</a>
+		<a href="">다음글</a>
 	</div>
 	
 	<!-- 동아리원일 때 아닐때 나눠서 버튼 작동하게 해야함!! -->

@@ -1,153 +1,135 @@
+
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
-   request.setCharacterEncoding("UTF-8");
+	request.setCharacterEncoding("UTF-8");
 String cp = request.getContextPath();
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>exit.jsp</title>
-<style type="text/css">
+<title>Insert title here</title>
 
-/*reset*/
-* {margin: 0;padding: 0;}
-body {margin: 0;}
-h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
-h1, h2, h3, h4, h5, h6 {font-weight: 700; }
-a {color: inherit; text-decoration: inherit;}
-img {vertical-align: middle;}
-a img {border: none;}
-li {list-style: none;}
-address, em, i, ul {font-style: normal;}
+<style>
+@import
+	url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR&display=swap')
+	;
+	
+.contents{
+margin : 5vh 34vh 5vh 30vh;
+}
 
-/*layout*/
-.mo {display: none;}
-.en {font-family: 'Exo 2', sans-serif;}
-body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
-.wrap {margin: 0 auto; }
+.card{
+margin-left : 5vh;
+}
 
 
+.row g-0{
+margin-bottom : 2vh;
+border: 1px;
+}
+
+.box{
+margin : 5vh 30vh 3vh 77%;
+}
+
+#search{
+margin : 0vh 30vh 0vh 60%;
+}
 
 </style>
 </head>
 <body>
+	<c:import url="nav.jsp"></c:import>
+	<c:import url="meetingmain.jsp"></c:import>
+	
+	<div class="box">
+				<div>
+			<form action="" name="categoryForm" method="post">
+				<select name="categoryKey" class="selectField">
+					<option value="notice">공지</option>
+					<option value="talk">자유글</option>
+					<option value="greeting">가입인사</option>
+					<option value="review">정모후기</option>
+					<option value="question">문의글</option>
+				</select>
+			</form>
+		</div>
+		
 
-<!-- 
- exit.jsp
--  동아리 관리자 페이지- 회원관리  - 강퇴자 목록
+		</div>
+					<div id="search">
+				<form action="" name="searchForm" method="post">
+					<select name="searchKey" class="selectField">
+						<option value="subject">제목</option>
+						<option value="name">작성자</option>
+					</select> <input type="text" name="searchValue" class="textField"> <input
+						type="button" value="검색" class="btn2" onclick="sendIt()">
+				</form>
+			</div>
+	
+	<div class="contents">
 
- -->
-
-   <div class="wrap">
-      <!-- 네브 영역 -->
-      <div>
-         <c:import url="nav.jsp"></c:import>
-      </div>
-      
-      <!-- 사이드바 영역 -->
-      
-      
-
-      <!-- 콘텐츠 영역 -->
-      <div id="content" style="margin-left: 30vh;">
-         <h1>[ 강퇴자 목록 ]</h1>
-         <hr>
-
-         <div>
-            <form action="">
-               <input type="text" value="검색어입력" class="search" />
-               <button type="button" >검색</button>
-            </form>
-         </div>
-         <br>
-         
-          <table id="outMembers" class="table" >
-           <tr>
-              <!-- 항목 10EA -->
-              <th>번호</th>
-              <th>ID</th>
-              <th>이름</th>
-              <th>닉네임</th>
-              <th>이메일</th>
-              <th>연령대</th>
-              <th>지역</th>
-              <th>신고횟수</th>
-              <th>강퇴날짜</th>
-              <th></th>
-           </tr>
-           
-           <tr>
-              <td>10</td>
-              <td>testid01</td>
-              <td>홍길동</td>
-              <td>동해번쩍</td>
-              <td>hong@naver.com</td>
-              <td>20대</td>
-              <td>서울</td>
-              <td>0</td>
-              <td>2021.12.03</td>
-              <td><button type="button" class="btn">삭제</button><td>
-           </tr>
-           <tr>
-              <td>9</td>
-              <td>testid02</td>
-              <td>고길동</td>
-              <td>서해번쩍</td>
-              <td>go@naver.com</td>
-              <td>30대</td>
-              <td>서울</td>
-              <td>0</td>
-              <td>2021.11.20</td>
-              <td><button type="button" class="btn">삭제</button><td>
-           </tr>
-           
-           <tr>
-              <td>4</td>
-              <td>testid07</td>
-              <td>최한결</td>
-              <td>노란토끼</td>
-              <td>hong444@naver.com</td>
-              <td>40대</td>
-              <td>서울</td>
-              <td>0</td>
-              <td>2021.11.05</td>
-              <td><button type="button" class="btn">삭제</button><td>
-           </tr>
-           <tr>
-              <td>3</td>
-              <td>testid08</td>
-              <td>김라운</td>
-              <td>제주감귤</td>
-              <td>hong5@naver.com</td>
-              <td>20대</td>
-              <td>서울</td>
-              <td>0</td>
-              <td>2021.11.01</td>
-              <td><button type="button" class="btn">삭제</button><td>
-           </tr>
-          
-           
-           </table>
-           
-         <div >
-            
-            <p>1 Prev 21 22 23 24 25 26 27 28 29 30 Next 54</p>      
-         </div>
-     
-            
-      
-      </div>
-      
-      <!-- 풋터영역 -->
-      <div>
-      <c:import url="footer.jsp"></c:import>
-	  </div>
-
-   </div>
+		<div class="card mb-3">
+			<div class="row g-0">
+				<div class="col-md-4">
+					<img src="http://artinsight.co.kr/data/tmp/1806/8a7aa7b2cc1c8658726cc7a2df93418f_Kthlez4CFNiI72tb12Chqdw.jpg" class="img-fluid rounded-start" alt="...">
+				</div>
+				<div class="col-md-8">
+					<div class="card-body">
+						<h5 class="card-title">정모제목</h5>
+						<p class="card-text">정모일 작성자</p>
+						<p class="card-text">
+							<small class="text-muted">Last updated 3 mins ago</small>
+						</p>
+					</div>
+				</div>
+			</div>
+			<br></br>
+			<br></br>
+			<div class="row g-0">
+				<div class="col-md-4">
+					<img src="http://artinsight.co.kr/data/tmp/1806/8a7aa7b2cc1c8658726cc7a2df93418f_Kthlez4CFNiI72tb12Chqdw.jpg" class="img-fluid rounded-start" alt="...">
+				</div>
+				<div class="col-md-8">
+					<div class="card-body">
+						<h5 class="card-title">정모제목</h5>
+						<p class="card-text">정모일 작성자</p>
+						<p class="card-text">
+							<small class="text-muted">Last updated 3 mins ago</small>
+						</p>
+					</div>
+				</div>
+			</div>
+			<br></br>
+			<br></br>
+			<div class="row g-0">
+				<div class="col-md-4">
+					<img src="http://artinsight.co.kr/data/tmp/1806/8a7aa7b2cc1c8658726cc7a2df93418f_Kthlez4CFNiI72tb12Chqdw.jpg" class="img-fluid rounded-start" alt="...">
+				</div>
+				<div class="col-md-8">
+					<div class="card-body">
+						<h5 class="card-title">정모제목</h5>
+						<p class="card-text">정모일 작성자</p>
+						<p class="card-text">
+							<small class="text-muted">Last updated 3 mins ago</small>
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
 
 
 
+
+		<div>
+			<button class="btn btn-primary btn-sm" type="button" id="insertBoard"
+				onclick="location.href='boardinsertform.action'">글 등록</button>
+		</div>
+
+	</div>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+   request.setCharacterEncoding("UTF-8");
+   String cp = request.getContextPath();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>beePicArticle.jsp</title>
+</head>
+<body>
+<!--  
+	beePicArticle.jsp
+	- 동아리 내 게시판 > 사진첩클릭 시 아티클
+-->
+
+
+</body>
+</html>

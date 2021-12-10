@@ -230,7 +230,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
       자유글
    </div>
    
-   <form action="" method="post" name="myForm">
+   <form action="" method="post" name="myForm" enctype="multipart/form-data">
       <div id="bbsCreated">
          <div class="bbsCreated_bottomLine">
             <dl>
@@ -264,24 +264,23 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
          </div><!-- close .bbsCreated_content -->
          
          <!-- 이미지 첨부하기 -->
-         <div class="image-show" id="image-show"></div>
-         	<form method="post" enctype="multipart/form-data">
+         <div class="image-show" id="image-show">
             <span id=upload class="btn1"> 
             	<label for="chooseFile"></label>
             </span> 
-            <input type="file" id="chooseFile" name="chooseFile"
+            <input multiple="multiple" type="file" id="chooseFile" name="chooseFile[]"
                accept="image/*" onchange="loadFile(this)">
-         </form>
-         <div class="fileContainer">
-            <div class="fileInput">
-               <span>FILE NAME:</span> <span id="fileName"></span>
-            </div>
-            <div class="buttonContainer">
-               <button type="button" class="submitButton" id="submitButton">등록</button>
-            </div>
-            
-         </div>
          
+	         <div class="fileContainer">
+	            <div class="fileInput">
+	               <span>FILE NAME:</span> <span id="fileName"></span>
+	            </div>
+	            <div class="buttonContainer">
+	               <button type="button" class="submitButton" id="submitButton">등록</button>
+	            </div>
+	            
+	         </div>
+         </div>
          
          <div id="bbsCreated_footer">
             <input type="button" value="등록하기" class="btn2"

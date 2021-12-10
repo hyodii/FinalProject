@@ -35,6 +35,18 @@
 	justify-content: space-between;
 }
 
+#content
+{
+	margin: 5vh 30vh 10vh 30vh;
+}
+
+.boxsearch
+{
+	text-align: right;
+}
+
+
+
 </style>
 </head>
 <body>
@@ -52,21 +64,42 @@
       
       <!-- 사이드바 영역  -->
       
-      <!-- 콘텐츠 영역 -->
-      <div id="content" style="margin-left: 30vh;">
+      <!-- 동아리 공통 메인 -->
+		<c:import url="meetingmain.jsp"></c:import>
+		
+		
+		<!-- 콘텐츠 영역 -->
+     <div id="content">
+     	<div>
          <h1>공지사항</h1>
-         <hr>
-
-         <div>
-            
-            <form action="">
-               <span class="right">
-                  <input type="text" value="검색어입력" class="search" />
-                  <input type="button" value="검색" />
-               </span>
-            </form>
-         </div>
-      
+		</div>
+		
+		<div class="boxsearch">
+			<div class="box">
+				<div>
+					<form action="" name="categoryForm" method="post">
+						<select name="categoryKey" class="selectField">
+							<option value="notice" selected="selected">공지</option>
+							<option value="talk">자유글</option>
+							<option value="greeting">가입인사</option>
+							<option value="review">정모후기</option>
+							<option value="question">문의글</option>
+						</select>
+					</form>
+				</div>
+			</div>
+			
+			<div id="search">
+				<form action="" name="searchForm" method="post">
+					<select name="searchKey" class="selectField">
+						<option value="subject">제목</option>
+						<option value="name">작성자</option>
+					</select> <input type="text" name="searchValue" class="textField"> <input
+							type="button" value="검색" class="btn2" onclick="sendIt()">
+				</form>
+			</div>
+      	</div>
+      	
          <table id="" class="table" >
               <tr>
                  <!-- 항목 8EA -->
@@ -79,7 +112,8 @@
               </tr>
               
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -87,7 +121,8 @@
                  <td>1</td>           
               </tr>
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -95,7 +130,8 @@
                  <td>1</td>           
               </tr>
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -103,7 +139,8 @@
                  <td>1</td>           
               </tr>
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -111,7 +148,8 @@
                  <td>1</td>           
               </tr>
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -119,7 +157,8 @@
                  <td>1</td>           
               </tr>
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -127,7 +166,8 @@
                  <td>1</td>           
               </tr>
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -135,7 +175,8 @@
                  <td>1</td>           
               </tr>
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -143,7 +184,8 @@
                  <td>1</td>           
               </tr>
               <tr>
-                 <td><input type="checkbox" value="999" />999</td>
+              	<td><input type="checkbox" value="999" />999</td>
+                 <td>999</td>
                  <td>글제목이다.</td>
                  <td>김기방</td>
                  <td>2021-12-07</td>
@@ -156,10 +198,11 @@
            
         <div id="footer">
          <p>1 Prev 21 22 23 24 25 26 27 28 29 30 Next 54</p>
-         <input type="button" value="삭제" />
+         <input type="button" value="삭제하기" 
+         onclick="javaScript:location.href='<%=cp %>/beenoticeDeleteList_ok.jsp'"/>
       	</div>   
       	
-      </div>
+     </div>
       
     
       
@@ -173,6 +216,8 @@
    </div>
 
 </div>
+
+
 
 
 </body>

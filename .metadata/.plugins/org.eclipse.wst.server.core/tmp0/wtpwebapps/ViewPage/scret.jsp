@@ -27,42 +27,51 @@ address, em, i, ul {font-style: normal;}
 .en {font-family: 'Exo 2', sans-serif;}
 body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 
-.wrap 
+section.main 
 {
-	/* margin: 0 auto;  */
-	display: flex;
-	justify-content: center;
-	align-items:center;
-	min-height: 100vh;
-	text-align: center;
+	width: 100%; 
+	height: 100vh; 
+	background: url(images/모자이크.png)no-repeat center/cover; 
+	position: relative; 
+	background-attachment: fixed;	
+}
+
+.lock 
+{
+   /* margin: 0 auto;  */
+   display: flex;
+   justify-content: center;
+   align-items:center;
+   min-height: 100vh;
+   text-align: center;
 }
 
 
 
 img
 {
-	width: 100px;
-	height: 100px;
-	display: block;
-	margin:auto;
+   width: 100px;
+   height: 100px;
+   display: block;
+   margin:auto;
 }
 
 </style>
 </head>
 <body>
 <!-- 
-	scret.jsp
-	이 페이지를 보려면 동아리에 가입해주세요.
+   scret.jsp
+   이 페이지를 보려면 동아리에 가입해주세요.
 -->
-<div class="wrap">
-	
-	<div id="text">
-	<img src="images/lock.png" alt="" />	
-	이 페이지를 보려면 동아리에 가입해 주세요.
-	</div>	
-	
-	
+<section class="main">
+<div class="lock">
+   <div id="text">
+   <img src="images/lock.png" alt="" />   
+   이 페이지를 보려면 동아리에 가입해 주세요.
+   </div>
 </div>
+   
+</section>>
 
 
 
