@@ -1,135 +1,252 @@
-
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%
-	request.setCharacterEncoding("UTF-8");
-String cp = request.getContextPath();
-%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Bootstrap CSS -->
+<link
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+   rel="stylesheet"
+   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+   crossorigin="anonymous">
+
+<title>Employees List</title>
 
 <style>
 @import
-	url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR&display=swap')
-	;
-	
-.contents{
-margin : 5vh 34vh 5vh 30vh;
+   url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR&display=swap')
+   ;
+
+.row p {
+   font-size: 10px;
+   margin-left: 3vh;
 }
 
-.card{
-margin-left : 5vh;
+.row {
+   margin-left: 10%;
+   margin-top: 10%;
 }
 
-
-.row g-0{
-margin-bottom : 2vh;
-border: 1px;
+.modal-footer {
+   display: flex;
+   flex-wrap: wrap;
+   flex-shrink: 0;
+   align-items: center;
+   justify-content: center;
+   padding: .75rem;
+   border-top: 0px solid #dee2e6;
+   border-bottom-right-radius: calc(.3rem - 1px);
+   border-bottom-left-radius: calc(.3rem - 1px);
+   padding: .75rem;
 }
 
-.box{
-margin : 5vh 30vh 3vh 77%;
+.btn-secondary {
+   color: #fff;
+   background-color: #6c757d;
+   border-color: #6c757d;
+   margin-right: 7vh;
 }
-
-#search{
-margin : 0vh 30vh 0vh 60%;
-}
-
 </style>
 </head>
 <body>
-	<c:import url="nav.jsp"></c:import>
-	<c:import url="meetingmain.jsp"></c:import>
-	
-	<div class="box">
-				<div>
-			<form action="" name="categoryForm" method="post">
-				<select name="categoryKey" class="selectField">
-					<option value="notice">공지</option>
-					<option value="talk">자유글</option>
-					<option value="greeting">가입인사</option>
-					<option value="review">정모후기</option>
-					<option value="question">문의글</option>
-				</select>
-			</form>
-		</div>
-		
-
-		</div>
-					<div id="search">
-				<form action="" name="searchForm" method="post">
-					<select name="searchKey" class="selectField">
-						<option value="subject">제목</option>
-						<option value="name">작성자</option>
-					</select> <input type="text" name="searchValue" class="textField"> <input
-						type="button" value="검색" class="btn2" onclick="sendIt()">
-				</form>
-			</div>
-	
-	<div class="contents">
-
-		<div class="card mb-3">
-			<div class="row g-0">
-				<div class="col-md-4">
-					<img src="http://artinsight.co.kr/data/tmp/1806/8a7aa7b2cc1c8658726cc7a2df93418f_Kthlez4CFNiI72tb12Chqdw.jpg" class="img-fluid rounded-start" alt="...">
-				</div>
-				<div class="col-md-8">
-					<div class="card-body">
-						<h5 class="card-title">정모제목</h5>
-						<p class="card-text">정모일 작성자</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			<br></br>
-			<br></br>
-			<div class="row g-0">
-				<div class="col-md-4">
-					<img src="http://artinsight.co.kr/data/tmp/1806/8a7aa7b2cc1c8658726cc7a2df93418f_Kthlez4CFNiI72tb12Chqdw.jpg" class="img-fluid rounded-start" alt="...">
-				</div>
-				<div class="col-md-8">
-					<div class="card-body">
-						<h5 class="card-title">정모제목</h5>
-						<p class="card-text">정모일 작성자</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			<br></br>
-			<br></br>
-			<div class="row g-0">
-				<div class="col-md-4">
-					<img src="http://artinsight.co.kr/data/tmp/1806/8a7aa7b2cc1c8658726cc7a2df93418f_Kthlez4CFNiI72tb12Chqdw.jpg" class="img-fluid rounded-start" alt="...">
-				</div>
-				<div class="col-md-8">
-					<div class="card-body">
-						<h5 class="card-title">정모제목</h5>
-						<p class="card-text">정모일 작성자</p>
-						<p class="card-text">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</p>
-					</div>
-				</div>
-			</div>
-			
-			
-		</div>
 
 
+   <!-- modal button -->
+   <div>
+      <a href="#" id="modal1" class="btn btn-success btn-sm"
+         data-bs-toggle="modal" data-bs-target="#employee_details1">평가하기</a>
+   </div>
 
 
-		<div>
-			<button class="btn btn-primary btn-sm" type="button" id="insertBoard"
-				onclick="location.href='boardinsertform.action'">글 등록</button>
-		</div>
+   <!-- Modal -->
+   <!-- 평가 창 -->
 
-	</div>
+   <div class="modal fade" id="employee_details1" tabindex="-1"
+      aria-labelledby="employee_details1" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">개인평가</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="닫기"></button>
+            </div>
+            <div class="row">
+               <div class="col-lg-4">
+                  <a href="#"> <svg class="bd-placeholder-img rounded-circle"
+                        width="80" height="80" xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: 80x80"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+               <title>Placeholder</title><rect width="100%" height="100%"
+                           fill="#777" />
+               <text x="50%" y="50%" fill="#777" dy=".3em">80x80</text></svg>
+
+                     <p>닉네임</p>
+                  </a>
+               </div>
+               <!-- /.col-lg-4 -->
+               <div class="col-lg-4">
+                  <a href="#"> <svg class="bd-placeholder-img rounded-circle"
+                        width="80" height="80" xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: 80x80"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+               <title>Placeholder</title><rect width="100%" height="100%"
+                           fill="#777" />
+               <text x="50%" y="50%" fill="#777" dy=".3em">80x80</text></svg>
+
+                     <p>닉네임</p>
+                  </a>
+               </div>
+               <!-- /.col-lg-4 -->
+               <div class="col-lg-4">
+                  <a href="#"> <svg class="bd-placeholder-img rounded-circle"
+                        width="80" height="80" xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: 80x80"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+               <title>Placeholder</title><rect width="100%" height="100%"
+                           fill="#777" />
+               <text x="50%" y="50%" fill="#777" dy=".3em">80x80</text></svg>
+
+                     <p>닉네임</p>
+                  </a>
+               </div>
+               <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+               <div class="col-lg-4">
+                  <a href="modal2.jsp"> <svg
+                        class="bd-placeholder-img rounded-circle" width="80" height="80"
+                        xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder: 80x80"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+               <title>Placeholder</title><rect width="100%" height="100%"
+                           fill="#777" />
+               <text x="50%" y="50%" fill="#777" dy=".3em">80x80</text></svg>
+
+                     <p>닉네임</p>
+                  </a>
+               </div>
+               <!-- /.col-lg-4 -->
+               <div class="col-lg-4">
+                  <a href="#"> <svg class="bd-placeholder-img rounded-circle"
+                        width="80" height="80" xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: 80x80"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+               <title>Placeholder</title><rect width="100%" height="100%"
+                           fill="#777" />
+               <text x="50%" y="50%" fill="#777" dy=".3em">80x80</text></svg>
+
+                     <p>닉네임</p>
+                  </a>
+               </div>
+               <!-- /.col-lg-4 -->
+               <!-- 이중모달 연결 -->
+               <div class="col-lg-4">
+                  <a href="#" data-bs-toggle="modal"
+                     data-bs-target="#employee_details2"> <svg
+                        class="bd-placeholder-img rounded-circle" width="80" height="80"
+                        xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder: 80x80"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+               <title>Placeholder</title><rect width="100%" height="100%"
+                           fill="#777" />
+               <text x="50%" y="50%" fill="#777" dy=".3em">80x80</text></svg>
+
+                     <p>닉네임</p></a> </a>
+               </div>
+
+               <div></div>
+               <!-- /.col-lg-4 -->
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                     data-bs-dismiss="modal">Close</button>
+
+               </div>
+
+               <div class="modal fade" id="employee_details2" tabindex="-1"
+                  aria-labelledby="employee_details2" aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h5 class="modal-title" id="exampleModalLabel">TO. 차분한포카칩
+                              님,</h5>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal"
+                              aria-label="닫기"></button>
+                        </div>
+                        <form>
+                           <div class="modal-body">
+                              <input type="checkbox" name="rate"> &nbsp;시간약속을 잘 지켜요<br>
+                              <input type="checkbox" name="rate"> &nbsp;친절하고 매너가 좋아요<br>
+                              <input type="checkbox" name="rate"> &nbsp;적극적으로 참여해요<br>
+                              <input type="checkbox" name="rate"> &nbsp;다른 회원의 말에 귀
+                              기울여줘요<br> <input type="checkbox" name="rate">
+                              &nbsp;회원들을 재밌게 해줘요<br> <input type="checkbox" name="rate">
+                              &nbsp;사전 준비를 잘해요<br> <input type="checkbox" name="rate">
+                              &nbsp;동아리 분위기를 잘 띄워줘요<br> <br>
+                              <br>
+                              <br> <input type="checkbox" name="rate">
+                              &nbsp;동아리 활동을 지연 시켜요<br> <input type="checkbox"
+                                 name="rate"> &nbsp;불친절하고 매너가 좋지 못해요<br> <input
+                                 type="checkbox" name="rate"> &nbsp;소극적으로 참여해요<br>
+                              <input type="checkbox" name="rate"> &nbsp;다른 회원을 무시해요<br>
+                              <input type="checkbox" name="rate"> &nbsp;금전적인 문제를
+                              일으켜요<br> <input type="checkbox" name="rate">
+                              &nbsp;타인에게 지나친 관심을 표현해요<br>
+                           </div>
+                        </form>
+                     </div>
+
+
+
+                  </div>
+               </div>
+
+
+
+            </div>
+            <!-- /.row -->
+
+         </div>
+
+
+
+      </div>
+   </div>
+
+
+
+   <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+      crossorigin="anonymous"></script>
+   <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+      integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+      crossorigin="anonymous"></script>
+   <script>
+      $(document).ready(function()
+      {
+
+         $('#employee_details2').on('beforeShow', function()
+         {
+            console.log('Submodal beforeShow event');
+         }).on('show', function()
+         {
+            console.log('Submodal show event');
+         }).on('beforeHide', function()
+         {
+            console.log('Submodal beforeHide event');
+         }).on('hide', function()
+         {
+            console.log('Submodal hide event');
+         });
+
+      });
+   </script>
+
 </body>
 </html>
