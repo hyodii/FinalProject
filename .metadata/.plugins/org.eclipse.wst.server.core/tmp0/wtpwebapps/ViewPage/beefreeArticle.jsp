@@ -20,6 +20,7 @@
    crossorigin="anonymous">
 
 <style type="text/css">
+
 /*reset*/
 * {margin: 0;padding: 0;}
 body {margin: 0;}
@@ -189,6 +190,18 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 }
 
 </style>
+<!-- 권한 수정 이걸로 대체 가능!
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("#update").click(function(){
+		    alert("수정 권한이 없습니다.");
+		});
+	});	
+
+</script>
+ -->
 </head>
 <body>
 
