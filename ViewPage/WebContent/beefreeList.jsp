@@ -11,7 +11,7 @@
 <title>beefreeList.jsp</title>
 <style type="text/css">
 
-#footer
+#content_footer
 {
 	display: flex;
 	justify-content: space-between;
@@ -164,7 +164,7 @@
               </table>
         
            
-        <div id="footer">
+        <div id="content_footer">
          <p>1 Prev 21 22 23 24 25 26 27 28 29 30 Next 54</p>
          <input type="button" value="글쓰기" 
          onclick="javaScript:location.href='<%=cp %>/beefreeCreated.jsp'"/>

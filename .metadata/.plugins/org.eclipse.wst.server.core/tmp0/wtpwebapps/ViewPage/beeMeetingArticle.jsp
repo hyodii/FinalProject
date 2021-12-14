@@ -180,7 +180,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 
 .profile
 {
-	display: flex;
+	/* display: flex; */
 }
 .congratulation
 {
@@ -280,7 +280,13 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 				<p>신청자 리스트</p>
 				
 				<div class="profile">
-					<div class="circle"></div>
+					<div class="circle">
+						<img alt="프로필이미지" src="">
+					</div>
+					
+					<div>
+						닉네임
+					</div>
 				</div>
 				
 		     </div>                

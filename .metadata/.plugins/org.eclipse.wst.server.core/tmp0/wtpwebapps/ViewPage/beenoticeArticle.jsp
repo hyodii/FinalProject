@@ -239,7 +239,6 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
    </div><!-- close Modal  -->
 
 
-	<form>
 		<div id="bbsArticle">
 			
 			<div id="bbsArticle_header">
@@ -280,7 +279,6 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
 			
 			
 		</div><!-- close #bbsArticle -->
-	</form><!-- close form -->
 	
 	
 	<c:import url="comment.jsp"></c:import>	

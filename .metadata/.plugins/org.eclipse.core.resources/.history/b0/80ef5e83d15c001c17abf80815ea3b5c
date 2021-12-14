@@ -1,0 +1,19 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+   request.setCharacterEncoding("UTF-8");
+   String cp = request.getContextPath();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>nonmemberArticle.jsp</title>
+</head>
+<body>
+<!--  
+	nonmemberArticle.jsp
+	- 고객센터 - 비회원 문의 - 아티클 
+-->
+</body>
+</html>

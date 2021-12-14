@@ -1,0 +1,9 @@
+
+12월 13, 2021 14:26:49.44 NEW SESSION
+12월 13, 2021 14:26:49.44 [21608:15396:1213/142649.441:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 13, 2021 14:26:49.44 [21608:15396:1213/142649.441:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 13, 2021 14:26:49.44 [21608:15396:1213/142649.441:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 13, 2021 14:26:49.44 [21608:15396:1213/142649.445:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 13, 2021 14:26:49.48 [21608:23344:1213/142649.480:ERROR:device_event_log_impl.cc(214)] [14:26:49.480] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 14:26:49.48 [21608:23344:1213/142649.481:ERROR:device_event_log_impl.cc(214)] [14:26:49.482] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 15:01:31.26 [21608:23344:1213/150131.261:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
